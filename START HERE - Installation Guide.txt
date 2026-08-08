@@ -1,0 +1,143 @@
+============================================================
+  HOW TO RUN THE DATA ANALYST AGENT ON YOUR COMPUTER
+============================================================
+
+This guide is for complete beginners. Just follow the steps
+in order — it takes about 5 minutes the first time.
+
+
+------------------------------------------------------------
+STEP 1: INSTALL PYTHON (only needed once)
+------------------------------------------------------------
+
+1. Open your browser and go to:
+   https://www.python.org/downloads/
+
+2. Click the big yellow "Download Python" button.
+
+3. Run the installer you just downloaded.
+
+   *** WINDOWS USERS - VERY IMPORTANT ***
+   On the FIRST installer screen, CHECK the box that says:
+       [X] Add Python to PATH
+   Then click "Install Now".
+
+4. Wait for it to finish, then close the installer.
+
+
+------------------------------------------------------------
+STEP 2: EXTRACT THE ZIP FILE
+------------------------------------------------------------
+
+1. Find the file "data_analyst_agent.zip" you downloaded.
+
+2. Right-click it and choose:
+     - Windows: "Extract All..."
+     - Mac:     double-click the file
+
+3. You will get a folder named "data_analyst_agent".
+   Move it somewhere easy to find, like your Desktop.
+
+
+------------------------------------------------------------
+STEP 3: START THE AGENT
+------------------------------------------------------------
+
+Open the "data_analyst_agent" folder.
+
+You will see two launcher files:
+
+   >>>  "Run Agent (Windows).bat"       (for Windows PCs)
+   >>>  "Run Agent (Mac-Linux).command" (for Mac or Linux)
+
+DOUBLE-CLICK the one that matches your computer.
+
+A black/white terminal window will open. The FIRST time you
+run it, it will automatically download the libraries it
+needs (this takes 2-3 minutes). Wait for it to finish.
+
+Then your web browser will open automatically and show:
+
+                 http://localhost:8501
+
+That's the Data Analyst Agent! You're ready to go.
+
+
+------------------------------------------------------------
+STEP 4: USING THE AGENT
+------------------------------------------------------------
+
+The app has 6 tabs at the top. Use them in order:
+
+   1. Inspect   - load and examine your data
+   2. Clean     - fix missing values, duplicates, etc.
+   3. EDA       - automatic statistics and charts
+   4. Dashboard - interactive Plotly dashboard
+   5. SQL       - ask questions in plain English
+   6. Python Code - download reusable scripts
+
+There are TWO ways to load data:
+
+   A) Upload from your computer:
+      Use the "Browse files" button in the left sidebar.
+      Works with CSV, Excel, Parquet, JSON.
+
+   B) Drop files into the "data" folder:
+      Copy any file into the "data" subfolder.
+      Restart the app (or use the menu in top-right > Rerun).
+      The file appears in the dropdown "Files attached".
+
+
+------------------------------------------------------------
+STEP 5: STOPPING THE AGENT
+------------------------------------------------------------
+
+When you're done:
+
+   - Just CLOSE the black terminal window, OR
+   - Click on the terminal window and press Ctrl+C
+
+
+------------------------------------------------------------
+TROUBLESHOOTING
+------------------------------------------------------------
+
+PROBLEM: "'python' is not recognized" on Windows
+SOLUTION: Reinstall Python and MAKE SURE you check
+          "Add Python to PATH" during install.
+
+PROBLEM: "pip is not recognized"
+SOLUTION: Use "python -m pip install ..." instead of
+          just "pip install ...". The launcher already
+          does this for you.
+
+PROBLEM: Browser does not open automatically
+SOLUTION: Open your browser manually and go to:
+          http://localhost:8501
+
+PROBLEM: Port 8501 already in use
+SOLUTION: Another copy of the app is running. Close the
+          old terminal window, then double-click the
+          launcher again.
+
+PROBLEM: A library fails to install
+SOLUTION: Run this command manually in a terminal:
+          pip install -r requirements.txt
+          Then re-run the launcher.
+
+
+------------------------------------------------------------
+WHAT'S INCLUDED
+------------------------------------------------------------
+
+app.py                   Main application
+README.md                Full documentation
+requirements.txt         List of Python libraries
+core/                    Agent brain (cleaning, EDA, SQL, etc.)
+data/                    Put your data files here
+Run Agent (Windows).bat  Windows one-click starter
+Run Agent (Mac-Linux).command  Mac/Linux one-click starter
+
+
+Enjoy!
+============================================================
